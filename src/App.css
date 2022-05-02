@@ -1,0 +1,122 @@
+/* Misc tags */
+body {
+	margin: 48px 0;
+	background: url("fe6_idoun_flash.png") 0 0/100% 100% no-repeat fixed;
+	font-family: Bahnschrift, "Segoe UI", Ubuntu, sans-serif;
+}
+p {
+	box-shadow: 0 0 5px black;
+	background-color: rgba(0,0,0,0.7);
+	color: white;
+	margin: 10px;
+	padding: 5px;
+}
+
+/* Classes */
+.skill_name {
+	border: 1px solid #D0C1DE;
+	border-radius: 5px;
+	padding: 1px;
+}
+
+/* Links */
+a,a:visited {
+	text-decoration: none;
+	color: #bbf;
+	padding: 2px;
+}
+a:hover{
+	text-decoration: underline;
+}
+a:active{
+	text-decoration: none;
+	background-color: #002;
+	color: #99f;
+	outline: 1px solid #bbf;
+}
+
+/* Header */
+#header_top {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: black;
+	color: white;
+	padding: 5px 0;
+	z-index: 99;
+	box-shadow: 0 3px 5px black;
+}
+#header_top a, #header_top i {
+	color: #ccc;
+	text-decoration: none;
+	padding: 2px;
+	border-radius: 5px;
+}
+#header_top a:hover {
+	background-color: #333;
+	text-decoration: none;
+}
+#header_top a:active {
+	background-color: #555;
+	text-decoration: none;
+	outline: none;
+}
+#header_top #ext_links {
+	text-align: center;
+	margin-right: 10px;
+}
+#header_top #sns {
+	text-align: right;
+	margin-right: 10px;
+}
+
+/* Table */
+table {
+	background-color: rgba(20,0,40,0.7);
+	color: white;
+	cursor: default;
+	width: 100%;
+}
+th {
+	background-color: rgba(60,35,83,0.5);
+	padding: 0 5px;
+}
+th:nth-child(odd) {
+	border-bottom: 3px solid #A472D2;
+}
+th:nth-child(even) {
+	border-bottom: 3px solid #B392D1;
+}
+tbody tr:hover{
+	background-color: rgba(119,91,146,0.3);
+	outline: 1px solid rgba(162,143,180,0.8);
+}
+
+/* Footer */
+#footer_contents {
+	margin-top: 20px;
+	background-color: #333;
+	color: #eee;
+	text-align: center;
+	width: 100%;
+	padding: 5px 0;
+}
+#footer_contents a {
+	color: #cff;
+}
+
+/* Skills and refine naming */
+tr td:nth-child(2):before,td:nth-child(2)::before,span.skill_name:before,span.skill_name::before { content: "["; }
+tr td:nth-child(2):after,td:nth-child(2)::after,span.skill_name:after,span.skill_name::after { content: "]"; }
+tr td:nth-child(1), tr td:nth-child(2), .skill_name { font-family: "Ubuntu Mono", "Hack", "Consolas", monospace; font-size: 14px; }
+td span.eff { outline: 1px solid rgb(255, 128, 0); color: rgb(255, 128, 0); background-color: #320; }
+td span.ar { outline: 1px solid red; color: red; background-color: #300; }
+td span.sr { outline: 1px solid #0C0; color: #0C0; background-color: #030; }
+td span.dr { outline: 1px solid #BEBE00; color: #BEBE00; background-color: #330; }
+td span.rr { outline: 1px solid #00C0C0; color: #00C0C0; background-color: #034; }
+td span[class$="r"]:before,td span[class$="r"]::before,td span.eff:before,td span.eff::before { content: "("; }
+td span[class$="r"]:after,td span[class$="r"]::after,td span.eff:after,td span.eff::after { content: ")"; }
+td span { padding: 1px; margin-right: 1px; }
